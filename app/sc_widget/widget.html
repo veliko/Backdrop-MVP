@@ -1,0 +1,17 @@
+<div class="logoSearch">
+  <h1>backdrop</h1>
+  <form class="search" ng-submit="getSongs()">
+    <input type="text" ng-model="query" placeholder="search soundcloud"/>
+    <button type="submit">search</button>
+  </form>
+</div>
+
+<div class="sc" ng-controller="scCtrl">
+  <iframe id="soundcloud_widget" 
+    src="{{trackUrl}}" 
+    width="100%"
+    height="120"
+    frameborder="no">
+  </iframe>
+</div>
+

@@ -1,0 +1,11 @@
+{
+  "name": "backdrop",
+  "version": "1.0.0",
+  "description": "Web app which mixes audio with ambient sounds",
+  "main": "backdrop.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Veliko Markov",
+  "license": "ISC"
+}
