@@ -63,10 +63,11 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  width: 300px;
+  width: 300;
   height: 100vh;
-  background-color: #333;
+  background-color: #222;
 }
+
 
 .wrapper {
   padding-right: 300px;
@@ -78,9 +79,8 @@ body {
 
 .logo_wrapper {
   position: relative;
-  top: 50%;
+  top: 49%;
   transform: translateY(-50%);
-  /*background-color: #999;*/
   text-align: center;
 }
 
@@ -161,15 +161,58 @@ h1 {
   float: left;
 }
 
-
-
-.spotify_wrapper iframe {
-  opacity: 0.5;
+.spotify_wrapper  {
+  opacity: 0.3;
   display: block;
   margin: auto auto;
 }
 
-.spotify_wrapper iframe:hover {
+
+.spotify_wrapper:hover, .spotify_wrapper:focus {
   opacity: 0.8;
   transition: 0.5s;
+}
+
+.track_list {
+  height: 60%;
+  position: relative;
+  overflow: scroll;
+}
+
+.spotify-wrapper .track {
+  max-width: 300px;
+}
+
+.track {
+  color: #bbb;
+  font-size: 12px;
+  font: serif;
+  max-width: 300px;
+  overflow: scroll;
+  position: relative;
+}
+
+.track:hover {
+  background-color: #333;
+}
+
+.track img {
+  width: 50px;
+  height: 50px;
+}
+
+
+.track_name {
+  position: absolute;
+  font-weight: normal;
+  top: 10px;
+  left: 60px;
+}
+
+.track_artist {
+  position: absolute;
+  font-weight: lighter;
+  color: #999;
+  top: 25px;
+  left: 60px;
 }

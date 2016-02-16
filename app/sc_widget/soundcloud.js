@@ -2,23 +2,30 @@ angular.module('backdrop.sc_widget', [])
 
 .controller('scCtrl', function($scope, $window, $location, $sce){
 
-
   // spotify get data
   var spotifyApi = new SpotifyWebApi();    
 
-  $scope.trackSearchResults = [];
-
-  // create url
-  $scope.trackID = 6109158;
-
+  $scope.query = "hello";
+  $scope.trackUrl = $sce.trustAsResourceUrl("https://embed.spotify.com/?uri=spotify:track:5bMCH61d8FH9RIBs15kVTM");
   // helper function to get songs
   $scope.getSongs = function(){
     spotifyApi.searchTracks($scope.query)
       .then(function(data) {
-        console.log('Spotify search results:', data);
+        $scope.trackSearchResults = data;
+        $scope.$apply();
+        $scope.query = "";
+        console.log('Spotify search results:', $scope.trackSearchResults);
       }, function(err) {
         console.error(err);
       });
+  };
+
+  // get initial set of songs
+  $scope.trackSearchResults = [];
+  $scope.getSongs();
+
+  $scope.play = function(track){
+    $scope.trackUrl = $sce.trustAsResourceUrl("https://embed.spotify.com/?uri=" + track.uri);
   };
 
 });

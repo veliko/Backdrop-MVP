@@ -2,9 +2,17 @@
 <!-- <div class="content_wrapper"> -->
 
   <section class="spotify_wrapper">
-    <iframe src="https://embed.spotify.com/?uri=spotify:track:3hB5DgAiMAQ4DzYbsMq1IT" width="300" height="380" frameborder="0" allowtransparency="true">
+    <iframe src="{{trackUrl}}" width="300" height="380" frameborder="0" allowtransparency="true">
     </iframe>
-    text
+    
+    <div class="track_list">
+      <div class="track" ng-repeat="track in trackSearchResults.tracks.items" ng-click="play(track)">
+        <img class="track_image" src="{{ track.album.images[0].url }}" />
+        <h2 class="track_name">{{track.name}}</h2>
+        <h3 class="track_artist">{{track.artists[0].name}}</h3>
+      </div>
+    </div>
+  
   </section>
 
   <div class="wrapper">
@@ -18,20 +26,4 @@
   </div>
 
 
-<!-- </div> -->
-
-<!-- <div class="search_results">
-  <audio id="song_player" controls></audio>
-  <div ng-repeat="song in trackSearchResults">{{ song.title }}</div>
-</div> -->
-
-
-<!-- <div class="sc">
-  <iframe id="soundcloud_widget" 
-    src="{{trackUrl}}" 
-    width="100%"
-    height="120"
-    frameborder="no">
-  </iframe>
-</div> -->
 
