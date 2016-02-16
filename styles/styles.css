@@ -50,25 +50,38 @@ table {
 
 /* styles begin here */
 
-@font-face {
-    font-family: sensation;
-    src: url(sansation_light.woff);
-}
-
 body {
   background-color: #000; 
   font-family: sans-serif;
 }
 
-.logoSearch {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/*.content_wraper {
+  position: relative;
+}
+*/
+.spotify_wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: #333;
+}
+
+.wrapper {
+  padding-right: 300px;
+  width: calc("100vw");
+  height: 100vh;  
   background-color: #000;
+}
+
+
+.logo_wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  /*background-color: #999;*/
   text-align: center;
-  padding: 30px 30px;
-  width: 100%;
 }
 
 h1 {
@@ -131,20 +144,32 @@ h1 {
   background-color: rgba(50,50,50,0.5);
 }
 
-.sc {
+.search_results {
   position: fixed;
-  bottom: 0;
+  color: #ececec;
+  bottom: 120px;
   width: 100%;
+  height: 180px;
+  background-color: #111;
+  content: "";
 }
 
-.sc iframe {
-  opacity: 0.2;
+.search_results div {
+  color: #bbb;
+  margin: 10px;
+  display: inline;
+  float: left;
+}
+
+
+
+.spotify_wrapper iframe {
+  opacity: 0.5;
   display: block;
   margin: auto auto;
 }
 
-.sc iframe:hover {
+.spotify_wrapper iframe:hover {
   opacity: 0.8;
   transition: 0.5s;
 }
-

@@ -2,6 +2,7 @@ var app = angular.module('MVP', [
   'backdrop.sc_widget',
   'ngRoute'
 ])
+
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
     .when('/', {
