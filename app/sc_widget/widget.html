@@ -4,7 +4,6 @@
   <section class="spotify_wrapper">
     <iframe src="{{trackUrl}}" width="300" height="380" frameborder="0" allowtransparency="true">
     </iframe>
-    
     <div class="track_list">
       <div class="track" ng-repeat="track in trackSearchResults.tracks.items" ng-click="play(track)">
         <img class="track_image" src="{{ track.album.images[0].url }}" />
@@ -12,8 +11,13 @@
         <h3 class="track_artist">{{track.artists[0].name}}</h3>
       </div>
     </div>
-  
   </section>
+
+
+  <div class="backdrop_wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GyUwg2fBg3k?autoplay=true&amp;rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+
 
   <div class="wrapper">
     <section class="logo_wrapper">

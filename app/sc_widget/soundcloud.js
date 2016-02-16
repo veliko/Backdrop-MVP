@@ -26,6 +26,24 @@ angular.module('backdrop.sc_widget', [])
 
   $scope.play = function(track){
     $scope.trackUrl = $sce.trustAsResourceUrl("https://embed.spotify.com/?uri=" + track.uri);
+    setTimeout(function(){
+      $('#iframe').click(function(){
+        console.log('triggered click on iframe');
+      });
+    }, 0);
+  };
+
+  // create youTube player
+  var onYouTubeIframeAPIReady = function() {
+    player = new YT.Player('player', {
+      height: '390',
+      width: '640',
+      videoId: 'M7lc1UVf-VE',
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
   };
 
 });
