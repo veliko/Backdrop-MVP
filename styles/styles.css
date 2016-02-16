@@ -62,6 +62,19 @@ body {
   width: 300;
   height: 100vh;
   background-color: #222;
+  opacity: 0.3;
+  display: block;
+  margin: auto auto;
+}
+
+.spotify_wrapper:not(:focus) {
+  opacity: 0.3;
+  transition: 0.48s;
+}
+
+.spotify_wrapper:hover, .spotify_wrapper:focus {
+  opacity: 0.8;
+  transition: 0.48s;
 }
 
 .wrapper {
@@ -69,8 +82,8 @@ body {
   width: calc("100vw");
   height: 100vh;  
   background-color: #000;
-  background: radial-gradient(circle at center, #111 0%,#000000 50%);
-  background-position: -150px -10px; 
+  background: radial-gradient(circle at center, #222 0%,#000000 45%);
+  background-position: -150px -13px; 
 }
 
 .backdrop_wrapper {
@@ -83,14 +96,23 @@ body {
   opacity: 0.3;
 }
 
-.backdrop_wrapper iframe {
+.backdrop_wrapper button{
+  width: 100px;
+  height: 60px;
+  float: right;
+}
+
+#video-placeholder {
+  left:0;
+  bottom: 0;
+  position: fixed;
   display: none;
 }
 
 .backdrop_wrapper:hover, .backdrop_wrapper:focus {
   opacity: 0.8;
+  transition: 0.48s;
 }
-
 
 .logo_wrapper {
   position: relative;
@@ -105,7 +127,7 @@ h1 {
   font-family: 'Megrim', cursive;
   display: border-box;
   letter-spacing: 10px;
-  color: #ececec;
+  color: #eee;
   margin-bottom: 30px;
 }
 
@@ -176,22 +198,22 @@ h1 {
   float: left;
 }
 
-.spotify_wrapper  {
-  opacity: 0.3;
-  display: block;
-  margin: auto auto;
-}
-
-
-.spotify_wrapper:hover, .spotify_wrapper:focus {
-  opacity: 0.8;
-  transition: 0.5s;
-}
-
 .track_list {
   height: 60%;
   position: relative;
-  overflow: scroll;
+  overflow-x:hidden;
+  overflow-y:scroll;
+}
+
+.track_list::-webkit-scrollbar {
+  width: 6px;
+  opacity: 0.3; 
+}
+.track_list::-webkit-scrollbar * {
+  background:transparent; 
+}
+.track_list::-webkit-scrollbar-thumb {
+  background:rgba(150,150,150,0.2) !important; 
 }
 
 .spotify-wrapper .track {
