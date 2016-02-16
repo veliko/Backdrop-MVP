@@ -1,6 +1,6 @@
-angular.module('backdrop.sp_widget', [])
+angular.module('backdrop.spotify_widget', [])
 
-.controller('spCtrl', function($scope, $window, $location, $sce){
+.controller('spotifyCtrl', function($scope, $window, $location, $sce){
 
 
   // spotify get data

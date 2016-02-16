@@ -1,5 +1,6 @@
 var app = angular.module('MVP', [
-  'backdrop.sp_widget',
+  'backdrop.spotify_widget',
+  'backdrop.soundCloud_widget',
   'ngRoute'
 ])
 
@@ -7,6 +8,10 @@ var app = angular.module('MVP', [
   $routeProvider
     .when('/', {
       templateUrl: 'app/spotify_widget/widget.html',
-      controller: 'spCtrl'
+      controller: 'spotifyCtrl'
+    })
+    .when('/soundCloud', {
+      templateUrl: 'app/soundCloud_widget/widget.html',
+      controller: 'soundCloudCtrl'
     })
 });

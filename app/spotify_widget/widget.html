@@ -42,8 +42,18 @@
     <section class="logo_wrapper">
       <h1>backdrop</h1>
       <form class="search" ng-submit="getSongs()">
-        <input type="text" ng-model="query" placeholder="search spotify"/>
+        <input type="text" ng-model="query" placeholder="find your beat"/>
         <button type="submit">search</button>
+        <div>
+          <fieldset>
+            <input type="radio" name="api" id="spotify" value="spotify" checked/> 
+            <label for="spotify">Spotify</label>
+            <input type="radio" name="api" id="soundCloud" value="soundCloud" />
+            <label for="soundCloud">SoundCloud</label>
+            <input type="radio" name="api" id="youTube" value="youTube" />
+            <label for="youTube">YouTube</label>
+          </fieldset>
+        </div>
       </form>
     </section>
   </div>
