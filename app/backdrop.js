@@ -1,12 +1,12 @@
 var app = angular.module('MVP', [
-  'backdrop.sc_widget',
+  'backdrop.sp_widget',
   'ngRoute'
 ])
 
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'app/sc_widget/widget.html',
-      controller: 'scCtrl'
+      templateUrl: 'app/spotify_widget/widget.html',
+      controller: 'spCtrl'
     })
 });

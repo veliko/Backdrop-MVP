@@ -93,11 +93,12 @@ body {
   height: 65px;
   bottom: 0;
   right: 300px;
+  background-color: #080808;
 }
 
 .ambience_control {
   position: absolute;
-  left: 51.5%;
+  left: 52%;
   top: -5%;
 }
 
@@ -119,7 +120,7 @@ body {
 .ambience_select {
   float: right;
   margin-right: 30px;
-  padding-top: 5px;
+  padding-top: 7px;
   height: 65px;
 }
 
