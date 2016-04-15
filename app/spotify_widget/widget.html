@@ -1,6 +1,4 @@
 
-<!-- <div class="content_wrapper"> -->
-
   <section class="spotify_wrapper">
     <iframe id="spotify" src="{{trackUrl}}" width="300" height="380" frameborder="0" allowtransparency="true">
     </iframe>
@@ -46,11 +44,11 @@
         <button type="submit">search</button>
         <div>
           <fieldset>
-            <input type="radio" name="api" id="spotify" value="spotify" checked/> 
+            <input type="radio" name="api" id="spotify" ng-model="api" value="Spotify" checked /> 
             <label for="spotify">Spotify</label>
-            <input type="radio" name="api" id="soundCloud" value="soundCloud" />
+            <input type="radio" name="api" id="soundCloud" ng-model="api" value="SoundCloud" />
             <label for="soundCloud">SoundCloud</label>
-            <input type="radio" name="api" id="youTube" value="youTube" />
+            <input type="radio" name="api" id="youTube" ng-model="api" value="YouTube" />
             <label for="youTube">YouTube</label>
           </fieldset>
         </div>

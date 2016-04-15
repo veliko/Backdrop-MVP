@@ -329,3 +329,8 @@ h1 {
   top: 25px;
   left: 60px;
 }
+
+#soundCloud_player {
+  width: 300px;
+  display: block;
+}

@@ -1,0 +1,58 @@
+
+  <section class="spotify_wrapper">
+    <audio id="soundCloud_player" controls></audio>
+    <div class="track_list">
+      <div class="track" ng-repeat="track in trackSearchResults" ng-click="play(track)">
+        <img class="track_image" src="{{ track.artwork_url }}" />
+        <h2 class="track_name">{{track.title}}</h2>
+        <!-- <h3 class="track_artist">{{track.artists[0].name}}</h3> -->
+      </div>
+    </div>
+  </section>
+
+  
+  <div class="backdrop_wrapper">
+    
+    <div class="ambience_control">
+      <div id="video-placeholder"></div>
+      <button id="play">></button>
+      <button id="pause">| |</button>
+      <button id="up">+</button>
+      <button id="down">-</button>
+    </div>
+
+    <div class="ambience_select">
+      <label> choose ambience: </label> 
+      <select name="ambience_dropdown">
+        <option value="dromund_kaas">Sith Imperial Capital Dromund Kaas</option>
+        <option value="coruscant">Star Wars: Coruscant Penthouse</option>
+        <option value="rain">Heavy Rain</option>
+        <option value="thunderstorm">Thunderstorm</option>
+        <option value="fire">Crackling Fire</option>
+      </select>    
+    </div>
+    
+  </div>
+
+
+  <div class="wrapper">
+    <section class="logo_wrapper">
+      <h1>backdrop</h1>
+      <form class="search" ng-submit="getSongs()">
+        <input type="text" ng-model="query" placeholder="find your beat"/>
+        <button type="submit">search</button>
+        <div>
+          <fieldset>
+            <input type="radio" name="api" id="spotify" ng-model="api" value="Spotify" checked /> 
+            <label for="spotify">Spotify</label>
+            <input type="radio" name="api" id="soundCloud" ng-model="api" value="SoundCloud" />
+            <label for="soundCloud">SoundCloud</label>
+            <input type="radio" name="api" id="youTube" ng-model="api" value="YouTube" />
+            <label for="youTube">YouTube</label>
+          </fieldset>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
